@@ -174,8 +174,17 @@ namespace GameOfLifeApp
             button.BorderThickness = new Thickness(1);
             Grid.SetColumn(button, row);
             Grid.SetRow(button, column);
-            
+            button.Click += Cell_Click;
             return button;
+        }
+
+        private static void Cell_Click(object sender, RoutedEventArgs e)
+        {
+            var cell = sender as Button;
+
+            int row = (int)cell.GetValue(Grid.RowProperty);
+            int column = (int)cell.GetValue(Grid.ColumnProperty);
+            MessageBox.Show(string.Format("Button clicked at column {0}, row {1}", column, row));
         }
 
         public void RepaintBoard()

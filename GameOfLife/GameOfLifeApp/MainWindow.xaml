@@ -1,8 +1,23 @@
 ﻿<Window x:Class="GameOfLifeApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:gameOfLifeApp="clr-namespace:GameOfLifeApp"
-        Title="MainWindow" Height="600" Width="600">
+        Title="Game of Life" Height="600" Width="600">
     <Grid>
-        <gameOfLifeApp:GameBoard x:Name="Board" BoardSize="30" AliveCellColor="Yellow"></gameOfLifeApp:GameBoard>
+        <Grid.Resources>
+            <Style x:Key="CommandButton" TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,10,5"></Setter>
+                <Setter Property="Width" Value="100"></Setter>
+                <Setter Property="Height" Value="35"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <gameOfLifeApp:GameBoard Grid.Row="0" x:Name="Board" BoardSize="30" AliveCellColor="Yellow"></gameOfLifeApp:GameBoard>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1" Margin="5">
+            <Button x:Name="Record" Width="100" Style="{StaticResource CommandButton}" Click="Record_Click">Record Seed</Button>
+            <Button x:Name="Play" Width="100" Style="{StaticResource CommandButton}" Click="Play_Click">Play</Button>
+        </StackPanel>
     </Grid>
 </Window>

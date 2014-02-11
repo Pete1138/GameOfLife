@@ -1,0 +1,4 @@
+*.suo
+GameOfLife/GameOfLifeApp/obj/*.*
+GameOfLife/GameOfLifeApp/obj/
+GameOfLife/GameOfLifeApp/bin/

@@ -25,12 +25,11 @@ namespace GameOfLifeApp
         private bool[,] _seed;
         private bool _isRunning = true;
         private bool _isRecording = false;
+        private const int TimerIntervalMilliseconds = 100;
 
         public MainWindow()
         {
             InitializeComponent();
-            //Board.SetCell(10,10,isAlive:true);
-
             DoWork();
         }
 
@@ -63,7 +62,7 @@ namespace GameOfLifeApp
 
                     while (_isRunning)
                     {
-                        SpinWait.SpinUntil(() => false, 100);
+                        SpinWait.SpinUntil(() => false, TimerIntervalMilliseconds);
 
                         await Dispatcher.InvokeAsync(MakeRandomCellAlive(random),DispatcherPriority.Normal);
                     }

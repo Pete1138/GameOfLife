@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeApp", "GameOfLifeApp\GameOfLifeApp.csproj", "{2A8D6D32-C452-4EC1-A2C1-3734464D9F6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeTests", "GameOfLifeTests\GameOfLifeTests.csproj", "{B6D5DFFE-6202-47D7-8812-F6C8A31AF4BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{2A8D6D32-C452-4EC1-A2C1-3734464D9F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8D6D32-C452-4EC1-A2C1-3734464D9F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8D6D32-C452-4EC1-A2C1-3734464D9F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D5DFFE-6202-47D7-8812-F6C8A31AF4BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D5DFFE-6202-47D7-8812-F6C8A31AF4BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D5DFFE-6202-47D7-8812-F6C8A31AF4BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D5DFFE-6202-47D7-8812-F6C8A31AF4BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

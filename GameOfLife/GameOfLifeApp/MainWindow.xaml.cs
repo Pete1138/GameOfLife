@@ -22,7 +22,7 @@ namespace GameOfLifeApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int[,] _seed;
+        private bool[,] _seed;
         private bool _isRunning = true;
         private bool _isRecording = false;
 
@@ -30,13 +30,18 @@ namespace GameOfLifeApp
         {
             InitializeComponent();
             //Board.SetCell(10,10,isAlive:true);
+
             DoWork();
         }
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
-            //_seed = new int[Board.BoardSize,Board.BoardSize];
-            //Board.StartRecordingSeed();
+            var seed = new BoardArray(30);
+            seed[10][10] = true;
+            seed[20][20] = true;
+            var storage = new Storage();
+            storage.Store(seed,"board1.gb");
+            var board = storage.Load<Dictionary<int, Dictionary<int, bool>>>("board1.gb");
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)
